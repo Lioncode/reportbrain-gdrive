@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="FormView.buttons">
+        <t t-jquery=".o_form_buttons_view" t-operation="append">
+            <form t-if="widget.is_action_enabled('edit')" class="o_form_file_upload" action="/web/binary/upload_formdata">
+                <input type="hidden" name="csrf_token" t-att-value="csrf_token"/>
+                <input type="hidden" name="model" t-att-value="widget.modelName"/>
+                <input type="hidden" name="session_id" t-att-value="widget.getSession().session_id" t-if="widget.getSession().override_session"/>
+                <button accesskey="d" class="btn btn-secondary o_form_button_upload_directory" type="button">
+                    Upload Directory<span class="badge"></span>
+                </button>
+                <input type="file" webkitdirectory="true" mozdirectory="true" msdirectory="true" odirectory="true" directory="true" class="o_form_file_upload_input"/>
+            </form>
+        </t>
+    </t>
+</templates>
