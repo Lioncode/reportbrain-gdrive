@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" inherit_id="web.assets_backend" name="Asset Backend">
+            <xpath expr="." position="inside">
+                <script src="/real_time_task_message/static/src/js/form_controller.js"/>
+            </xpath>
+        </template>
+
+        <template id="assets_frontend" inherit_id="web.assets_frontend" name="Asset Frontend">
+            <xpath expr="." position="inside">
+                <script src="/real_time_task_message/static/src/js/chatter.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
